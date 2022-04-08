@@ -1,7 +1,19 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+
+    <router-link to="MoreInfoView">More Info</router-link> |
+
+    <router-link to="/Signup">Sign up</router-link> |
+
+    <router-link to="/login">Login</router-link> |
+
+    <router-link to="/logout">Logout</router-link> |
+
+    <router-link to="/PostsIndex">Posts</router-link> 
+
+
   </nav>
   <router-view/>
 </template>
@@ -16,7 +28,8 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 20px;
+  margin-left: 10%;
 }
 
 nav a {
