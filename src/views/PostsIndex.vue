@@ -13,20 +13,45 @@ import axios from 'axios';
     },
     methods: {
       showPosts: function () {
-        axios.get("/posts"). then((response) => {
+        axios.get('/posts.json').then((response) => {
           console.log(response.data);
           this.posts = response.data;
-        });
-      },
+        })
+      }
     },
   };
 </script>
 
 <template>
-  <div class="home">
+  <!-- <div class="home">
     <h1>{{ message }}</h1>
-    <p> {{ posts }}</p>
+    <div v-for="post in posts">
+    <p>{{ post.image }}</p> 
+   
+    </div>
+  </div> -->
+
+<div class="card" style="width: 18rem;">
+  <img src="{{ post.image }}" class="card-img-top" alt="...">
+  <div v-for="post in posts" class="card-body">
+    <p> {{ post.title }}</p>
+    <p> {{ post.body }}</p>
   </div>
+</div>
+
+    
+    
+     
 </template>
 
-<style></style>
+
+
+
+<style>
+
+.card {
+  margin: 5, 10, 15, 15;
+  width: 100%;
+}
+
+</style>

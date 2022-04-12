@@ -3,7 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
 
-    <router-link to="MoreInfoView">More Info</router-link> |
+    <router-link to="/PostsShow">Posts Show</router-link> |
 
     <router-link to="/Signup">Sign up</router-link> |
 

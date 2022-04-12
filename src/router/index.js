@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import MoreInfoView from '../views/MoreInfoView.vue';
 
 import Signup from "../views/Signup.vue";
 
@@ -9,6 +8,12 @@ import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 
 import PostsIndex from "../views/PostsIndex.vue";
+
+// import MoreInfoView from '../views/MoreInfoView.vue';
+
+import PostsShow from '../views/PostsShow.vue';
+
+import PostsEdit from '../views/PostsEdit.vue';
 
 const routes = [
   {
@@ -25,9 +30,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: "/MoreInfoView",
-    name: "MoreInfo",
-    component: MoreInfoView
+    path: "/PostsShow",
+    name: "PostsShow",
+    component: PostsShow
   },
   {
     path: "/Signup",
@@ -48,6 +53,11 @@ const routes = [
     path: "/PostsIndex",
     name: "PostsIndex",
     component: PostsIndex
+  },
+  {
+    path: "/PostsEdit",
+    name: "PostsEdit",
+    component: PostsEdit
   },
 ]
 
