@@ -4,7 +4,12 @@
   export default {
     data: function () {
       return {
-        newUserParams: {},
+        newUserParams: {
+          name: "",
+          email: "",
+          password: "",
+          password_confirmation: ""
+        },
         errors: [],
       };
     },
@@ -32,8 +37,10 @@
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
       <div>
-        <label>Name:</label>
-        <input type="text" v-model="newUserParams.name" />
+        <label>Username:</label>
+        <input type="text" v-model="newUserParams.name" maxlength=15/>
+        <br>
+        <small v-if="newUserParams.name.length <= 15 && newUserParams.name.length > 0">{{15 - newUserParams.name.length }} characters remaining: </small>
       </div>
       <div>
         <label>Email:</label>
@@ -51,3 +58,5 @@
     </form>
   </div>
 </template>
+
+
